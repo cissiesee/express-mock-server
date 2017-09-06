@@ -4,9 +4,9 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('mock-server:server');
-var http = require('http');
+import app from "../app";
+import debug from "debug";
+import http from "http";
 
 /**
  * Get port from environment and store in Express.
@@ -20,6 +20,7 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+var debugServer = debug("mockserver:server");
 
 /**
  * Listen on provided port, on all network interfaces.
